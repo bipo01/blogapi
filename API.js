@@ -2,10 +2,10 @@ import express from "express";
 import cors from "cors";
 import pg from "pg";
 import env from "dotenv";
-env.config();
 
 const app = express();
 const port = 3000;
+env.config();
 
 const db = new pg.Client({
     connectionString: process.env.PG_URL,
